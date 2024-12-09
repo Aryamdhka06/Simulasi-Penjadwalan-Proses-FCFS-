@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penjadwalan Proses - FCFS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulasi Penjadwalan Proses (FCFS)</h1>
+        <form id="processForm">
+            <label for="processId">ID Proses:</label>
+            <input type="text" id="processId" required>
+            
+            <label for="arrivalTime">Arrival Time:</label>
+            <input type="number" id="arrivalTime" required>
+            
+            <label for="burstTime">Burst Time:</label>
+            <input type="number" id="burstTime" required>
+            
+            <button type="button" id="addProcess">Tambahkan Proses</button>
+        </form>
+        
+        <div id="processList"></div>
+
+        <button id="startSimulation">Mulai Simulasi</button>
+        <div id="output"></div>
+        
+        <div id="result">
+            <h2>Hasil Akhir</h2>
+            <table id="resultTable">
+                <thead>
+                    <tr>
+                        <th>Proses</th>
+                        <th>Burst Time</th>
+                        <th>Waiting Time</th>
+                        <th>Turnaround Time</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div id="averages">
+                <p>Rata-rata Waiting Time: <span id="avgWait"></span></p>
+                <p>Rata-rata Turnaround Time: <span id="avgTurnaround"></span></p>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
